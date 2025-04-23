@@ -30,11 +30,11 @@ export default function Homepage() {
   return (
     <>
       <div
-        className="relative h-screen flex flex-col p-5 items-center justify-start"
+        className="relative overflow-x-hidden h-screen flex flex-col p-5 items-center justify-start xl:h-screen"
         ref={aboutRef}
       >
         {/*navigationbar*/}
-        <div className="fixed w-2/4 h-10 flex flex-row justify-evenly items-center rounded bg-red-600/50 backdrop-blur-sm">
+        <div className="fixed w-2/4 h-10 flex flex-row justify-evenly items-center rounded bg-red-600/50 backdrop-blur-sm xl:w-1/4">
           <div onClick={projectClick}>
             <ProjectIcon width="28px" color="white" />
           </div>
@@ -51,10 +51,21 @@ export default function Homepage() {
           src="../images/final-profile.svg"
           alt="Jefferson"
         />*/}
-        <div className="w-3/4 mt-24">
-          <Profile />
+        <div className="w-3/4 mt-24 xl:w-1/2 xl:flex xl:flex-row">
+          <Profile width="50%" />
+          <div className="xl:ml-10 xl:mt-32">
+            <h1 className="text-5xl mt-5 font-semibold font-roboto tracking-tight">
+              Jefferson
+            </h1>
+            <p className="text-sm text-left mt-2 leading-4 tracking-tight font-roboto ">
+              {" "}
+              I blend logic with a little mystery, craft with a dash of
+              mischief, and always leave a spark behind.
+            </p>
+          </div>
         </div>
-        <div className=" w-3/4 h-32 flex flex-col">
+        {/*
+        <div className=" w-3/4 h-32 flex flex-col xl:w-1/2">
           <h1 className="text-5xl mt-5 font-semibold font-roboto tracking-tight">
             Jefferson
           </h1>
@@ -64,15 +75,19 @@ export default function Homepage() {
             and always leave a spark behind.
           </p>
         </div>
-        <div className="w-3/4 h-full flex justify-evenly mt-12">
+
+        */}
+        <div className="w-3/4 h-full flex justify-evenly mt-12 xl:w-1/4">
           <TechTwo width="50px" />
           <TechOne width="50px" />
           <TechThree width="50px" />
         </div>
+        <div className="flex flex-col justify-between h-max xl:h-fit xl:items-center">
+          <Projects ref={targetRef} />
+          <SocialMedia ref={socialRef} />
+          <Outro />
+        </div>
       </div>
-      <Projects ref={targetRef} />
-      <SocialMedia ref={socialRef} />
-      <Outro />
     </>
   );
 }

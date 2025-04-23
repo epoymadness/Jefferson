@@ -12,7 +12,7 @@ const SocialMedia = forwardRef<HTMLDivElement, SocialMediaProps>(
     return (
       <div
         ref={ref}
-        className="h-80 w-screen flex flex-col items-center justify-between"
+        className="h-80 w-screen flex flex-col items-center justify-between xl:w-1/2 "
       >
         <div className="flex flex-row justify-evenly items-center mt-20 w-2/4   ">
           <Facebook width="40px" />
