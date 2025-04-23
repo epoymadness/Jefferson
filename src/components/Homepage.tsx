@@ -8,6 +8,7 @@ import Outro from "./Outro";
 import TechOne from "../icons/TechOne";
 import TechTwo from "../icons/TechTwo";
 import TechThree from "../icons/TechThree";
+import Profile from "../icons/Profile";
 
 export default function Homepage() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -45,11 +46,14 @@ export default function Homepage() {
           </div>
         </div>
         {/*profile pic*/}
-        <img
+        {/*<img
           className="w-3/4 mt-24 rounded"
-          src="/images/profile.jpg"
-          alt="jefferson"
-        />
+          src="../images/final-profile.svg"
+          alt="Jefferson"
+        />*/}
+        <div className="w-3/4 mt-24">
+          <Profile />
+        </div>
         <div className=" w-3/4 h-32 flex flex-col">
           <h1 className="text-5xl mt-5 font-semibold font-roboto tracking-tight">
             Jefferson
