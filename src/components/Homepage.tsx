@@ -29,10 +29,8 @@ export default function Homepage() {
 
   return (
     <>
-      <div
-        className="relative overflow-x-hidden h-screen flex flex-col p-5 items-center justify-start xl:h-screen"
-        ref={aboutRef}
-      >
+      <div className="relative h-screen flex flex-col p-5 items-center justify-start overflow-x-hidden pb-0">
+        <div ref={aboutRef}></div>
         {/*navigationbar*/}
         <div className="fixed w-2/4 h-10 flex flex-row justify-evenly items-center rounded bg-red-600/50 backdrop-blur-sm xl:w-1/4">
           <div onClick={projectClick}>
