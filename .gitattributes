@@ -1,0 +1,19 @@
+  # Set default behavior
+* text=auto
+
+# Use LF for text files
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.json text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+
+# Images and binaries — no text normalization
+*.png  binary
+*.jpg  binary
+*.svg  binary
+*.ico  binary
