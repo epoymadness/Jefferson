@@ -50,7 +50,7 @@ export default function Homepage() {
           alt="Jefferson"
         />*/}
         <div className="w-3/4 mt-24 xl:w-1/2 xl:flex xl:flex-row">
-          <Profile width="50%" />
+          <Profile />
           <div className="xl:ml-10 xl:mt-32">
             <h1 className="text-5xl mt-5 font-semibold font-roboto tracking-tight">
               Jefferson

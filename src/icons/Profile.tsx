@@ -1,10 +1,6 @@
-type Props = {
-  width?: string;
-};
-
-const Profile = ({ width }: Props) => (
+const Profile = () => (
   <svg
-    width={width}
+    className="xl:w-2/4"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 736 867"
