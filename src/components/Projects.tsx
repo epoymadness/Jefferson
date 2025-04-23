@@ -19,7 +19,7 @@ const Projects = forwardRef<HTMLDivElement, Project>((prop, ref) => {
       <div className=" w-3/4 h-80 justify-start mt-10 rounded-md flex flex-col">
         <img
           className="w-full h-40 object-cover rounded-md "
-          src="src/image/proj1.jpg"
+          src="/images/proj1.jpg"
           alt=""
         />
         <p className="leading-4 text-left mt-3 text-sm">
@@ -33,7 +33,7 @@ const Projects = forwardRef<HTMLDivElement, Project>((prop, ref) => {
       <div className=" w-3/4 h-80  items-center justify-start mt-10 rounded-md flex flex-col">
         <img
           className="w-full h-40 object-cover rounded-md"
-          src="src/image/proj2.jpg"
+          src="/images/proj2.jpg"
           alt=""
         />
         <p className="leading-4 text-left mt-3 text-sm">
@@ -47,7 +47,7 @@ const Projects = forwardRef<HTMLDivElement, Project>((prop, ref) => {
       <div className=" w-3/4 h-80  items-center justify-start mt-10 rounded-md flex flex-col">
         <img
           className="w-full h-40 object-cover rounded-md"
-          src="src/image/proj3.jpg"
+          src="/images/proj3.jpg"
           alt=""
         />
         <p className="leading-4 text-left mt-3 text-sm">

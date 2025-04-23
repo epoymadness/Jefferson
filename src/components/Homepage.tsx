@@ -47,7 +47,7 @@ export default function Homepage() {
         {/*profile pic*/}
         <img
           className="w-3/4 mt-24 rounded"
-          src="src/image/profile.jpg"
+          src="/images/profile.jpg"
           alt="jefferson"
         />
         <div className=" w-3/4 h-32 flex flex-col">
