@@ -1,10 +1,6 @@
-type Props = {
-  width?: string;
-};
-
-const TechOne = ({ width }: Props) => (
+const TechOne = () => (
   <svg
-    width={width || "100%"}
+    className="w-12 xl:w-8"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"

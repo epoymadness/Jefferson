@@ -1,10 +1,6 @@
-type Props = {
-  width?: string;
-};
-
-const TechThree = ({ width }: Props) => (
+const TechThree = () => (
   <svg
-    width={width || "100px"}
+    className="w-12 xl:w-8"
     viewBox="0 0 32 32"
     xmlns="http://www.w3.org/2000/svg"
   >
