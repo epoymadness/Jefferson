@@ -7,6 +7,9 @@ export default {
         roboto: ["Roboto", "sans-serif"],
         noto: ["Noto Sans", "sans-serif"],
       },
+      width: {
+        custom1: "25px",
+      },
     },
   },
   plugins: [],
