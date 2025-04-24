@@ -9,6 +9,7 @@ import TechOne from "../icons/TechOne";
 import TechTwo from "../icons/TechTwo";
 import TechThree from "../icons/TechThree";
 import profile from "/images/Jefferson.png";
+import Services from "./Services";
 
 export default function Homepage() {
   const [display, setDisplay] = useState("flex");
@@ -65,7 +66,7 @@ export default function Homepage() {
             <ProjectIcon />
           </div>
           <div onClick={socialMediaClick}>
-            <Contact />
+            <Contact color="fill-white" width="28px" hover="hover:w-8" />
           </div>
           <div onClick={aboutClick}>
             <Info />
@@ -84,13 +85,13 @@ export default function Homepage() {
               <TechOne />
               <TechThree />
             </div>
-            <h1 className="text-5xl mt-5 font-semibold font-roboto tracking-tight">
+            <h1 className="text-gray-950 text-5xl mt-5 font-semibold font-roboto tracking-tight">
               Jefferson
             </h1>
-            <p className="text-sm text-left mt-1 leading-4 tracking-tight font-roboto xl:w-10/12 ">
+            <p className="text-gray-950 text-sm text-left mt-1 leading-4 tracking-tight font-roboto xl:w-10/12 ">
               {" "}
-              I blend logic with a little mystery, craft with a dash of
-              mischief, and always leave a spark behind.
+              What started as a thought became something real—built with
+              purpose, not just code.{" "}
             </p>
           </div>
         </div>
@@ -99,7 +100,14 @@ export default function Homepage() {
           <TechOne />
           <TechThree />
         </div>
-        <div className="flex flex-col justify-between h-max xl:h-fit xl:items-center">
+        <div className="flex flex-col items-center justify-between h-max xl:h-fit xl:items-center">
+          <Services />
+          <div
+            onClick={socialMediaClick}
+            className="w-max flex justify-center  h-20 drop-shadow-md"
+          >
+            <Contact color="fill-blue-400" width="60px" hover="hover:w-16" />
+          </div>
           <Projects ref={targetRef} />
           <SocialMedia ref={socialRef} />
           <Outro />

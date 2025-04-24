@@ -14,22 +14,28 @@ const Projects = forwardRef<HTMLDivElement, Project>((prop, ref) => {
       className="h-max w-screen flex flex-col items-center justify-start  xl:mt-10 xl:h-min  xl:justify-between"
     >
       <div className="mt-20 w-3/4 xl:w-1/2">
-        <h1 className="text-5xl font-semibold tracking-tighter font-roboto text-right ">
+        <h1 className="text-5xl font-semibold tracking-tighter font-roboto text-right text-gray-950">
           PROJECTS
         </h1>
       </div>
       {/*project1*/}
       <div className=" w-3/4 h-80 justify-start mt-10 rounded-md xl:w-2/4  flex-col xl:h-96 ">
-        <img
-          className="w-full h-40 xl:h-56 object-cover rounded-md "
-          src={proj1}
-          alt=""
-        />
-        <p className="leading-4 text-left mt-3 text-sm ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        <a
+          href="https://github.com/epoymadness/cafeshop"
+          target="_blank"
+          rel="noopener norefferer"
+        >
+          <img
+            className="w-full h-40 xl:h-56 object-cover rounded-md "
+            src={proj1}
+            alt=""
+          />
+        </a>
+        <p className="leading-4 text-left mt-3 text-sm text-gray-950">
+          I've always dreamed of owning a café—specifically, one designed for
+          introverts. The idea came to me while I was ordering at a café one
+          day. I always feel a bit uncomfortable standing in front of the
+          cashier, and that sparked something.{" "}
         </p>
       </div>
       {/*project2*/}
@@ -39,7 +45,7 @@ const Projects = forwardRef<HTMLDivElement, Project>((prop, ref) => {
           src={proj2}
           alt=""
         />
-        <p className="leading-4 text-left mt-3 text-sm">
+        <p className="leading-4 text-left mt-3 text-sm text-gray-950">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -53,7 +59,7 @@ const Projects = forwardRef<HTMLDivElement, Project>((prop, ref) => {
           src={proj3}
           alt=""
         />
-        <p className="leading-4 text-left mt-3 text-sm">
+        <p className="leading-4 text-left mt-3 text-sm text-gray-950">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

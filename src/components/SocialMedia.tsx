@@ -20,7 +20,7 @@ const SocialMedia = forwardRef<HTMLDivElement, SocialMediaProps>(
             href="https://www.facebook.com/jefferson.yabut.52"
             target="_blank"
             rel="noopener noreferrer"
-            className="tracking-tighter"
+            className="tracking-tighter text-gray-950"
           >
             Jefferson Yabut
           </a>
@@ -31,7 +31,7 @@ const SocialMedia = forwardRef<HTMLDivElement, SocialMediaProps>(
             href="https://github.com/epoymadness"
             target="_blank"
             rel="noopener noreferrer"
-            className="tracking-tighter"
+            className="tracking-tighter text-gray-950"
           >
             epoymadness
           </a>
@@ -42,14 +42,14 @@ const SocialMedia = forwardRef<HTMLDivElement, SocialMediaProps>(
             href="https://www.instagram.com/epoymadness/"
             target="_blank"
             rel="noopener noreferrer"
-            className="tracking-tighter"
+            className="tracking-tighter text-gray-950"
           >
             Jefferson Yabut
           </a>
         </div>
         <div className="flex flex-row justify-evenly items-center w-2/4  ">
           <Linkedin width="40px" />
-          <h3 className="tracking-tighter">Jefferson Yabut</h3>
+          <h3 className="tracking-tighter text-gray-950">Jefferson Yabut</h3>
         </div>
         {prop.lastName}
       </div>

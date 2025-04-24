@@ -1,6 +1,14 @@
-const Contact = () => (
+type Props = {
+  color: string;
+  width: string;
+  stroke?: string;
+  hover?: string;
+};
+
+const Contact = ({ color, width, stroke, hover }: Props) => (
   <svg
-    className="w-7 hover:w-8 fill-white"
+    className={` ${hover} ${color} ${stroke}`}
+    width={width}
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
