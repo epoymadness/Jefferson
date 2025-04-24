@@ -1,12 +1,6 @@
-type ProjectIconProps = {
-  width?: string;
-  color?: string;
-};
-
-const ProjectIcon = ({ width, color }: ProjectIconProps) => (
+const ProjectIcon = () => (
   <svg
-    width={width || "20px"}
-    fill={color || "black"}
+    className="w-7 hover:w-8 fill-white"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"

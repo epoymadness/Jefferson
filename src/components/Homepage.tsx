@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Projects from "./Projects";
 import ProjectIcon from "../icons/ProjectIcon";
 import Contact from "../icons/Contact";
@@ -11,9 +11,34 @@ import TechThree from "../icons/TechThree";
 import profile from "/images/Jefferson.png";
 
 export default function Homepage() {
+  const [display, setDisplay] = useState("flex");
+  let scrollTimeout: number | null = null;
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const targetRef = useRef<HTMLDivElement | null>(null);
   const socialRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setDisplay("hidden");
+
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      scrollTimeout = window.setTimeout(() => {
+        setDisplay("flex");
+      }, 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, []);
 
   const projectClick = () => {
     targetRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -33,26 +58,28 @@ export default function Homepage() {
         <div ref={aboutRef}></div>
 
         {/*navigationbar*/}
-        <div className="fixed w-2/4 h-10 flex flex-row justify-evenly items-center rounded bg-blue-600/50 backdrop-blur-sm xl:w-1/4">
+        <div
+          className={`fixed ease-in-out w-2/4 h-10 ${display} flex-row justify-evenly items-center rounded bg-blue-600/50 backdrop-blur-sm xl:w-1/4 drop-shadow-lg`}
+        >
           <div onClick={projectClick}>
-            <ProjectIcon width="28px" color="white" />
+            <ProjectIcon />
           </div>
           <div onClick={socialMediaClick}>
-            <Contact width="25px" color="white" />
+            <Contact />
           </div>
           <div onClick={aboutClick}>
-            <Info width="10px" color="white" />
+            <Info />
           </div>
         </div>
         {/*profile section*/}
         <div className="w-3/4 mt-24 xl:w-3/4 xl:flex xl:flex-row  xl:h-2/3 xl:justify-center  ">
           <img
-            className="w-full rounded xl:w-2/4 xl:h-full "
+            className="w-full rounded-md xl:w-max xl:h-full "
             src={profile}
             alt="Jefferson"
           />
-          <div className="xl:ml-10  xl:h-1/full xl:flex xl:flex-col xl:justify-end xl:w-1/2  ">
-            <div className=" justify-evenly mt-12 xl:w-1/4 hidden xl:flex  ">
+          <div className="xl:ml-10  xl:h-1/full xl:flex xl:flex-col xl:justify-end xl:w-1/3  ">
+            <div className=" justify-between mt-12 xl:w-1/3 hidden xl:flex  ">
               <TechTwo />
               <TechOne />
               <TechThree />
@@ -60,7 +87,7 @@ export default function Homepage() {
             <h1 className="text-5xl mt-5 font-semibold font-roboto tracking-tight">
               Jefferson
             </h1>
-            <p className="text-sm text-left mt-2 leading-4 tracking-tight font-roboto xl:w-2/4">
+            <p className="text-sm text-left mt-1 leading-4 tracking-tight font-roboto xl:w-10/12 ">
               {" "}
               I blend logic with a little mystery, craft with a dash of
               mischief, and always leave a spark behind.

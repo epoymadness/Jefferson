@@ -1,12 +1,6 @@
-type Info = {
-  width?: string;
-  color?: string;
-};
-
-const Info = ({ width, color }: Info) => (
+const Info = () => (
   <svg
-    width={width || "20px"}
-    fill={color || "black"}
+    className="w-3 hover:w-4 fill-white"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
