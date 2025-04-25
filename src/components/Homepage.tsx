@@ -1,15 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import Projects from "./Projects";
-import ProjectIcon from "../icons/ProjectIcon";
 import Contact from "../icons/Contact";
-import Info from "../icons/Info";
 import SocialMedia from "./SocialMedia";
 import Outro from "./Outro";
-import TechOne from "../icons/TechOne";
-import TechTwo from "../icons/TechTwo";
-import TechThree from "../icons/TechThree";
-import profile from "/images/Jefferson.png";
+import Desktop from "./Desktop";
 import Services from "./Services";
+import Modal from "./Modal";
+import Profile from "./Profile";
+import Navigation from "./Navigation";
 
 export default function Homepage() {
   const [display, setDisplay] = useState("flex");
@@ -59,47 +57,16 @@ export default function Homepage() {
         <div ref={aboutRef}></div>
 
         {/*navigationbar*/}
-        <div
-          className={`fixed ease-in-out w-2/4 h-10 ${display} flex-row justify-evenly items-center rounded bg-blue-600/50 backdrop-blur-sm xl:w-1/4 drop-shadow-lg`}
-        >
-          <div onClick={projectClick}>
-            <ProjectIcon />
-          </div>
-          <div onClick={socialMediaClick}>
-            <Contact color="fill-white" width="28px" hover="hover:w-8" />
-          </div>
-          <div onClick={aboutClick}>
-            <Info />
-          </div>
-        </div>
+        <Navigation
+          display={display}
+          projectClick={() => projectClick()}
+          socialMediaClick={() => socialMediaClick()}
+          aboutClick={() => aboutClick()}
+        />
         {/*profile section*/}
-        <div className="w-3/4 mt-24 xl:w-3/4 xl:flex xl:flex-row  xl:h-2/3 xl:justify-center  ">
-          <img
-            className="w-full rounded-md xl:w-max xl:h-full "
-            src={profile}
-            alt="Jefferson"
-          />
-          <div className="xl:ml-10  xl:h-1/full xl:flex xl:flex-col xl:justify-end xl:w-1/3  ">
-            <div className=" justify-between mt-12 xl:w-1/3 hidden xl:flex  ">
-              <TechTwo />
-              <TechOne />
-              <TechThree />
-            </div>
-            <h1 className="text-gray-950 text-5xl mt-5 font-semibold font-roboto tracking-tight">
-              Jefferson
-            </h1>
-            <p className="text-gray-950 text-sm text-left mt-1 leading-4 tracking-tight font-roboto xl:w-10/12 ">
-              {" "}
-              What started as a thought became something real—built with
-              purpose, not just code.{" "}
-            </p>
-          </div>
-        </div>
-        <div className="w-3/4 h-44  flex justify-evenly mt-12 xl:hidden ">
-          <TechTwo />
-          <TechOne />
-          <TechThree />
-        </div>
+        <Profile />
+        {/*for desktop*/}
+        <Desktop />
         <div className="flex flex-col items-center justify-between h-max xl:h-fit xl:items-center">
           <Services />
           <div
@@ -109,6 +76,8 @@ export default function Homepage() {
             <Contact color="fill-blue-400" width="60px" hover="hover:w-16" />
           </div>
           <Projects ref={targetRef} />
+          {/*test modal for graphic designs*/}
+          <Modal />
           <SocialMedia ref={socialRef} />
           <Outro />
         </div>
