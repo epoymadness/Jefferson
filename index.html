@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        const theme = localStorage.theme;
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        if (theme === "dark" || (!theme && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./Jefferson.svg/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jefferson</title>
-    <script type="module" crossorigin src="/Jefferson/assets/index-R660SyZB.js"></script>
-    <link rel="stylesheet" crossorigin href="/Jefferson/assets/index-4HpFPSgZ.css">
+    <script type="module" crossorigin src="/Jefferson/assets/index-DbWfmzKJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/Jefferson/assets/index-DvhOg-HR.css">
   </head>
-  <body>
+  <body className="dark">
     <div id="root"></div>
   </body>
 </html>
