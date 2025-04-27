@@ -4,17 +4,12 @@ type Props = {
 
 const Facebook = ({ width }: Props) => (
   <svg
+    className="fill-none stroke-black stroke-2   dark:fill-none dark:stroke-white dark:stroke-2"
     width={width || "20px"}
     viewBox="0 0 48 48"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <defs>
-      <style>
-        {
-          ".a{fill:none;stroke:#000000;stroke-width: 3;stroke-linecap:round;stroke-linejoin:round;}"
-        }
-      </style>
-    </defs>
+    <defs></defs>
     <path
       className="a"
       d="M24,42.5V18.57a5.07,5.07,0,0,1,5.08-5.07h0c2.49,0,4.05.74,5.12,2.12"

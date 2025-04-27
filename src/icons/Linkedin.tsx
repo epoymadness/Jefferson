@@ -3,14 +3,13 @@ type Props = {
 };
 
 const Linkedin = ({ width }: Props) => (
-  <svg width={width} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <style>
-        {
-          ".b{fill:#000000;}.c{fill:none;stroke:#000000;stroke-width: 3;stroke-linecap:round;stroke-linejoin:round;}"
-        }
-      </style>
-    </defs>
+  <svg
+    width={width}
+    className="fill-none stroke-gray-950 stroke-2  dark:stroke-white dark:stroke-2 dark:fill-none"
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs></defs>
     <circle className="b" cx={15.64} cy={13.46} r={0.75} />
     <line className="c" x1={15.64} x2={15.64} y1={16.93} y2={31.91} />
     <path

@@ -4,19 +4,14 @@ type Props = {
 
 const Instagram = ({ width }: Props) => (
   <svg
+    className="stroke-text stroke-2 fill-none "
     width={width || "50px"}
     viewBox="0 0 48 48"
     id="Layer_2"
     data-name="Layer 2"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <defs>
-      <style>
-        {
-          ".cls-1{fill:none;stroke:#000000;stroke-width: 3;stroke-linecap:round;stroke-linejoin:round;}"
-        }
-      </style>
-    </defs>
+    <defs></defs>
     <path
       className="cls-1"
       d="M35.38,10.46a2.19,2.19,0,1,0,2.16,2.22v-.06A2.18,2.18,0,0,0,35.38,10.46Z"

@@ -1,11 +1,6 @@
-import { ReactNode, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-type Props = {
-  isOpen: boolean;
-  onClose: () => void;
-  children: ReactNode;
-};
+import { graphicTypes } from "../types/myTheme";
+import { useEffect, useRef } from "react";
 
 const backdrop = {
   hidden: { opacity: 0 },
@@ -17,7 +12,7 @@ const modal = {
   visible: { opacity: 1, scale: 1 },
 };
 
-export default function Graphics({ isOpen, onClose, children }: Props) {
+export default function Graphics({ isOpen, onClose, children }: graphicTypes) {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,7 +39,7 @@ export default function Graphics({ isOpen, onClose, children }: Props) {
         >
           <motion.div
             ref={modalRef}
-            className="bg-white rounded-2xl p-6 max-w-md w-full relative h-max overflow-y-auto"
+            className="bg-white dark:bg-gray-700 rounded-2xl p-6 max-w-md w-full relative h-max overflow-y-auto text-text"
             variants={modal}
             initial="hidden"
             animate="visible"
@@ -53,7 +48,7 @@ export default function Graphics({ isOpen, onClose, children }: Props) {
           >
             <button
               onClick={onClose}
-              className="absolute top-2 right-3 text-gray-500 hover:text-gray-800"
+              className="absolute top-2 right-3 text-gray-500 dark:text-darkText hover:text-gray-800"
             >
               ✕
             </button>

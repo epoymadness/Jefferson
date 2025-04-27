@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: ["selector", ".dark"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -10,7 +12,14 @@ export default {
       width: {
         custom1: "25px",
       },
+      colors: {
+        background: "var(--background)",
+        text: "var(--text)",
+        hover: "var(--hover)",
+      },
     },
   },
   plugins: [],
 };
+
+export default config;

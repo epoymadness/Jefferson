@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --background: #f9fafb;
+  --text: #030712;
+  --hover: #6b7280;
+}
+
+.dark {
+  --background: #111827;
+  --text: #f9fafb;
+  --hover: #6b7280;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
