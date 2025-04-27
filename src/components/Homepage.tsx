@@ -32,28 +32,49 @@ export default function Homepage() {
       document.documentElement.classList.remove("dark");
       setTheme(savedTheme || "system");
     }
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (localStorage.getItem("theme") === "system") {
+        if (e.matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
   }, []);
+
+  function updateTheme(): void {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (prefersDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
 
   const applyTheme = (newTheme: theme) => {
     setTheme(newTheme);
 
     if (newTheme === "dark") {
-      localStorage.theme = "dark";
+      localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else if (newTheme === "light") {
-      localStorage.theme = "light";
+      localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
-    } else {
-      // "system"
-      localStorage.removeItem("theme");
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      if (prefersDark) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
+    } else if (newTheme === "system") {
+      localStorage.setItem("theme", "system");
+      updateTheme();
     }
   };
 
@@ -96,7 +117,6 @@ export default function Homepage() {
     <>
       <div className="relative h-full xl:h-screen flex flex-col p-5 items-center justify-start overflow-x-hidden pb-0 bg-background ">
         <div ref={aboutRef}></div>
-
         {/*navigationbar*/}
         <Navigation
           display={display}
