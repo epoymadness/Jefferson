@@ -10,7 +10,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
       className="h-max w-screen flex flex-col items-center justify-start  xl:mt-10 xl:h-min  xl:justify-between"
     >
       <div className="mt-20 w-3/4 xl:w-1/2">
-        <h1 className="text-5xl font-semibold tracking-tighter font-roboto text-right text-text">
+        <h1 className="text-5xl font-semibold tracking-tighter font-roboto text-text ">
           PROJECTS
         </h1>
       </div>
