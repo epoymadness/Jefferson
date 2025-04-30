@@ -38,20 +38,25 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
         </p>
       </div>
       {/*project2*/}
-      <div className=" w-3/4 h-80 justify-start mt-10 rounded-md flex flex-col xl:w-2/4  xl:items-start xl:h-96 ">
-        <h3 className="font-bold font-noto tracking-tight text-text">
-          PENDING
-        </h3>
-        <img
-          className="w-full h-40 xl:h-56 object-cover rounded-md"
-          src={proj2}
-          alt=""
-        />
+      <div className="w-3/4 h-80 justify-start mt-10 rounded-md xl:w-2/4  flex-col xl:h-96 ">
+        <a
+          href="https://epoymadness.github.io/Filmstack/"
+          target="_blank"
+          rel="noopener norefferer"
+        >
+          <h3 className="font-bold font-noto tracking-tight text-text">
+            FILMSTACK
+          </h3>
+          <img
+            className="w-full h-40 xl:h-56 object-cover rounded-md"
+            src={proj2}
+            alt=""
+          />
+        </a>
         <p className="leading-4 text-left text-sm mt-3 text-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          It's a Letterboxd alternative where I log the movies I've recently
+          watched, rate them, and share my thoughts. Such a wonderful creation
+          of mine.
         </p>
       </div>
       {/*project3*/}

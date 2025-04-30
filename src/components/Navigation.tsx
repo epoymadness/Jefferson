@@ -15,7 +15,7 @@ export default function Navigation({
 }: navigationType) {
   return (
     <div
-      className={`fixed ease-in-out w-2/4 h-10 ${display} flex-row justify-evenly items-center rounded bg-blue-600/50 backdrop-blur-sm xl:w-1/4 drop-shadow-lg`}
+      className={`fixed ease-in-out w-2/4 h-10 ${display} flex-row justify-evenly items-center rounded bg-blue-600/50 backdrop-blur-sm xl:w-1/4 drop-shadow-lg mt-5 z-50`}
     >
       <div onClick={projectClick}>
         <ProjectIcon />

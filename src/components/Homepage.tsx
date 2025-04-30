@@ -9,6 +9,7 @@ import Modal from "./Modal";
 import Profile from "./Profile";
 import Navigation from "./Navigation";
 import { theme } from "../types/myTheme";
+import Background from "./Background";
 
 export default function Homepage() {
   const [, setTheme] = useState<theme>("system");
@@ -115,7 +116,7 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="relative h-full xl:h-screen flex flex-col p-5 items-center justify-start overflow-x-hidden pb-0 bg-background ">
+      <div className="relative h-full xl:h-screen flex flex-col pt-0 items-center justify-start overflow-x-hidden pb-0 bg-background ">
         <div ref={aboutRef}></div>
         {/*navigationbar*/}
         <Navigation
@@ -127,6 +128,8 @@ export default function Homepage() {
           dark={() => applyTheme("dark")}
           system={() => applyTheme("system")}
         />
+        {/*background*/}
+        <Background />
         {/*profile section*/}
         <Profile />
         {/*for desktop*/}

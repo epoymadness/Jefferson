@@ -1,13 +1,13 @@
-import profile from "/images/Jefferson.png";
+import profile from "/images/profile.jpg";
 import TechTwo from "../icons/TechTwo";
 import TechThree from "../icons/TechThree";
 import TechOne from "../icons/TechOne";
 
 export default function Profile() {
   return (
-    <div className="w-3/4 mt-24 xl:w-3/4 xl:flex xl:flex-row  xl:h-2/3 xl:justify-center  ">
+    <div className="w-3/4 mt-10 items-center flex flex-col xl:w-3/4  xl:flex-row  xl:h-2/3 xl:justify-center ">
       <img
-        className="w-full rounded-md xl:w-max xl:h-full "
+        className="w-40  rounded-full xl:w-max xl:h-full "
         src={profile}
         alt="Jefferson"
       />

@@ -12,7 +12,7 @@ const TechOne = () => (
     <g>
       <path
         fill="#007ACC"
-        clip-rule="evenodd"
+        clipRule="evenodd"
         fillRule="evenodd"
         className="st0"
         d="M0,61.44V0h122.88v122.88H0V61.44L0,61.44z M0,61.44L0,61.44L0,61.44L0,61.44z"
