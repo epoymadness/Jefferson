@@ -21,7 +21,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
           target="_blank"
           rel="noopener norefferer"
         >
-          <h3 className="tracking-tight font-bold font-noto  text-text">
+          <h3 className="tracking-tight font-bold font-helvetica  text-text">
             CAFESHOP
           </h3>
           <img
@@ -44,7 +44,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
           target="_blank"
           rel="noopener norefferer"
         >
-          <h3 className="font-bold font-noto tracking-tight text-text">
+          <h3 className="font-bold font-helvetica tracking-tight text-text">
             FILMSTACK
           </h3>
           <img
@@ -61,19 +61,24 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
       </div>
       {/*project3*/}
       <div className=" w-3/4 h-80 justify-start mt-10 rounded-md flex flex-col xl:w-2/4 xl:h-96 xl:items-start ">
-        <h3 className="font-bold  font-noto tracking-tight text-text ">
-          PENDING
-        </h3>
-        <img
-          className="w-full h-40 object-cover rounded-md xl:h-56"
-          src={proj3}
-          alt=""
-        />
+        <a
+          href="https://epoymadness.github.io/multiplaycation/"
+          target="_blank"
+          rel="noopener norefferer"
+        >
+          <h3 className="font-bold  font-helvetica tracking-tight text-text ">
+            MULTIPLAYCATION
+          </h3>
+          <img
+            className="w-full h-40 object-cover rounded-md xl:h-56"
+            src={proj3}
+            alt=""
+          />
+        </a>
         <p className="leading-4 text-left mt-3 text-sm text-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          My first commissioned project — a simple, kid-friendly multiplication
+          game that helps children practice math through fun and interactive
+          problems. Clean, easy to use, and built with learning in mind.
         </p>
       </div>
     </div>

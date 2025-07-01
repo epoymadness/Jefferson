@@ -9,7 +9,9 @@ export default function Modal() {
 
   return (
     <div className="flex flex-col h-28 justify-between">
-      <h1 className="font-bold text-text tracking-wide">MY GRAPHIC DESIGNS</h1>
+      <h1 className="font-bold font-helvetica text-text tracking-wide">
+        MY GRAPHIC DESIGNS
+      </h1>
       <button
         onClick={() => setIsOpenEthereal(true)}
         className="text-blue-400 font-bold hover:text-blue-800/50"
