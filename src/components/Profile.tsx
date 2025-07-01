@@ -17,10 +17,10 @@ export default function Profile() {
           <TechOne />
           <TechThree />
         </div>
-        <h1 className="text-text text-5xl mt-5 font-semibold font-roboto tracking-tight">
+        <h1 className="text-text text-5xl mt-5 font-semibold font-helvetica tracking-tight">
           Jefferson
         </h1>
-        <p className="text-text text-sm text-left mt-1 leading-4 tracking-tight font-roboto xl:w-10/12 ">
+        <p className="text-text text-sm text-left mt-1 leading-4 tracking-tight font-helvetica xl:w-10/12 ">
           {" "}
           What started as a thought became something real—built with purpose,
           not just code.{" "}

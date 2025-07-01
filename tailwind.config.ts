@@ -8,6 +8,7 @@ const config: Config = {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         noto: ["Noto Sans", "sans-serif"],
+        helvetica: ["Helvetica", "sans-serif"],
       },
       width: {
         custom1: "25px",
