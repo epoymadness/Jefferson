@@ -60,7 +60,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
         </p>
       </div>
       {/*project3*/}
-      <div className=" w-3/4 h-80 justify-start mt-10 rounded-md flex flex-col xl:w-2/4 xl:h-96 xl:items-start ">
+      <div className=" w-3/4 h-80 justify-start mt-10 rounded-md  flex-col xl:w-2/4 xl:h-96 xl:items-start ">
         <a
           href="https://epoymadness.github.io/multiplaycation/"
           target="_blank"
@@ -70,7 +70,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
             MULTIPLAYCATION
           </h3>
           <img
-            className="w-full h-40 object-cover rounded-md xl:h-56"
+            className="w-full h-40 object-cover rounded-md xl:h-56 "
             src={proj3}
             alt=""
           />
