@@ -4,8 +4,8 @@
 @font-face {
   font-family: "Helvetica";
   src: url("./font/Helvetica.ttf") format("truetype");
-  font-weight: thin;
-  font-style: thin;
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
