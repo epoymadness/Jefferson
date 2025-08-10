@@ -1,65 +1,45 @@
+import Projector from "./Projector";
+
 export default function Projects() {
+  const projects = [
+    {
+      title: "CAFESHOP",
+      description:
+        "I've always dreamed of owning a café—specifically, one designed for introverts. The idea came to me while I was ordering at a café one day. I always feel a bit uncomfortable standing in front of the cashier, and that sparked something.",
+      link: "https://github.com/epoymadness/cafeshop",
+    },
+    {
+      title: "FILMSTACK",
+      description:
+        "It's a Letterboxd alternative where I log the movies I've recently watched, rate them, and share my thoughts. Such a wonderful creation of mine.",
+      link: "https://epoymadness.github.io/Filmstack/",
+    },
+    {
+      title: "MULTIPLAYCATION",
+      description:
+        "My first commissioned project — a simple, kid-friendly multiplication game that helps children practice math through fun and interactive problems. Clean, easy to use, and built with learning in mind.",
+      link: "https://epoymadness.github.io/multiplaycation/",
+    },
+    {
+      title: "MY PORTFOLIO",
+      description:
+        "This portfolio is a showcase of my skills and projects, built with React and Tailwind CSS. It features a clean design, responsive layout, and easy navigation to highlight my work effectively.",
+      link: "https://epoymadness.github.io/Jefferson/",
+    },
+  ];
+
   return (
-    <div className="h-max w-screen flex flex-col items-center justify-start  xl:mt-10 xl:h-min  xl:justify-between">
-      <div className="mt-20 w-3/4 xl:w-1/2">
-        <h1 className="text-5xl font-semibold tracking-tighter font-helvetica text-text ">
-          PROJECTS
-        </h1>
-      </div>
+    <div className="h-max w-3/4 flex flex-col  items-center justify-start xl:h-min  xl:justify-between ">
       {/*project1*/}
-      <div className=" w-3/4 h-80 justify-start mt-10 rounded-md xl:w-2/4  flex-col xl:h-96  ">
-        <a
-          href="https://github.com/epoymadness/cafeshop"
-          target="_blank"
-          rel="noopener norefferer"
-        >
-          <h3 className="tracking-tight font-bold font-helvetica  text-text">
-            CAFESHOP
-          </h3>
-          <div className="border w-full h-40"></div>
-        </a>
-        <p className="leading-4 mt-3 text-left text-sm text-text">
-          I've always dreamed of owning a café—specifically, one designed for
-          introverts. The idea came to me while I was ordering at a café one
-          day. I always feel a bit uncomfortable standing in front of the
-          cashier, and that sparked something.{" "}
-        </p>
-      </div>
-      {/*project2*/}
-      <div className="w-3/4 h-80 justify-start mt-10 rounded-md xl:w-2/4  flex-col xl:h-96 ">
-        <a
-          href="https://epoymadness.github.io/Filmstack/"
-          target="_blank"
-          rel="noopener norefferer"
-        >
-          <h3 className="font-bold font-helvetica tracking-tight text-text">
-            FILMSTACK
-          </h3>
-          <div className="border w-full h-40"></div>
-        </a>
-        <p className="leading-4 text-left text-sm mt-3 text-text">
-          It's a Letterboxd alternative where I log the movies I've recently
-          watched, rate them, and share my thoughts. Such a wonderful creation
-          of mine.
-        </p>
-      </div>
-      {/*project3*/}
-      <div className=" w-3/4 h-80 justify-start mt-10 rounded-md  flex-col xl:w-2/4 xl:h-96 xl:items-start ">
-        <a
-          href="https://epoymadness.github.io/multiplaycation/"
-          target="_blank"
-          rel="noopener norefferer"
-        >
-          <h3 className="font-bold  font-helvetica tracking-tight text-text ">
-            MULTIPLAYCATION
-          </h3>{" "}
-          <div className="border w-full h-40"></div>
-        </a>
-        <p className="leading-4 text-left mt-3 text-sm text-text">
-          My first commissioned project — a simple, kid-friendly multiplication
-          game that helps children practice math through fun and interactive
-          problems. Clean, easy to use, and built with learning in mind.
-        </p>
+      <div className="xl:w-full xl:h-max xl:flex xl:flex-row xl:justify-evenly xl:flex-wrap gap-6">
+        {projects.map((project) => (
+          <Projector
+            title={project.title}
+            description={project.description}
+            link={project.link}
+            key={project.title} // Using title as a unique key for simplicity
+          />
+        ))}
       </div>
     </div>
   );

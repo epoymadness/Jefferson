@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type theme = "light" | "dark" | "system";
 
 export type customTheme = {
@@ -8,18 +6,8 @@ export type customTheme = {
   system: () => void;
 };
 
-export type navigationType = {
-  display: string;
-  projectClick: () => void;
-  socialMediaClick: () => void;
-  aboutClick: () => void;
-  light: () => void;
-  dark: () => void;
-  system: () => void;
-};
-
-export type graphicTypes = {
-  isOpen: boolean;
-  onClose: () => void;
-  children: ReactNode;
+export type projectType = {
+  title: string;
+  description: string;
+  link: string;
 };
