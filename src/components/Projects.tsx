@@ -1,14 +1,6 @@
-import { forwardRef } from "react";
-import proj1 from "/images/proj1.jpg";
-import proj2 from "/images/proj2.jpg";
-import proj3 from "/images/proj3.jpg";
-
-const Projects = forwardRef<HTMLDivElement>((_, ref) => {
+export default function Projects() {
   return (
-    <div
-      ref={ref}
-      className="h-max w-screen flex flex-col items-center justify-start  xl:mt-10 xl:h-min  xl:justify-between"
-    >
+    <div className="h-max w-screen flex flex-col items-center justify-start  xl:mt-10 xl:h-min  xl:justify-between">
       <div className="mt-20 w-3/4 xl:w-1/2">
         <h1 className="text-5xl font-semibold tracking-tighter font-helvetica text-text ">
           PROJECTS
@@ -24,11 +16,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
           <h3 className="tracking-tight font-bold font-helvetica  text-text">
             CAFESHOP
           </h3>
-          <img
-            className="w-full h-40 xl:h-56 object-cover rounded-md "
-            src={proj1}
-            alt=""
-          />
+          <div className="border w-full h-40"></div>
         </a>
         <p className="leading-4 mt-3 text-left text-sm text-text">
           I've always dreamed of owning a café—specifically, one designed for
@@ -47,11 +35,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
           <h3 className="font-bold font-helvetica tracking-tight text-text">
             FILMSTACK
           </h3>
-          <img
-            className="w-full h-40 xl:h-56 object-cover rounded-md"
-            src={proj2}
-            alt=""
-          />
+          <div className="border w-full h-40"></div>
         </a>
         <p className="leading-4 text-left text-sm mt-3 text-text">
           It's a Letterboxd alternative where I log the movies I've recently
@@ -68,12 +52,8 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
         >
           <h3 className="font-bold  font-helvetica tracking-tight text-text ">
             MULTIPLAYCATION
-          </h3>
-          <img
-            className="w-full h-40 object-cover rounded-md xl:h-56 "
-            src={proj3}
-            alt=""
-          />
+          </h3>{" "}
+          <div className="border w-full h-40"></div>
         </a>
         <p className="leading-4 text-left mt-3 text-sm text-text">
           My first commissioned project — a simple, kid-friendly multiplication
@@ -83,6 +63,4 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
       </div>
     </div>
   );
-});
-
-export default Projects;
+}

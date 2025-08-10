@@ -1,10 +1,11 @@
+@import "@flaticon/flaticon-uicons/css/all/all.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
   font-family: "Helvetica";
   src: url("./font/Helvetica.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: thin;
+  font-style: thin;
 }
 
 :root {
@@ -13,11 +14,13 @@
   --hover: #6b7280;
 }
 
+/*
 .dark {
   --background: #111827;
   --text: #f9fafb;
   --hover: #6b7280;
 }
+*/
 
 @tailwind base;
 @tailwind components;
