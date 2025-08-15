@@ -1,7 +1,7 @@
 import profile from "/images/profile.jpg";
 export default function Profile() {
   return (
-    <div className="w-3/4 h-svh xl:h-svh items-start flex flex-col xl:w-2/4 xl:flex-col xl:items-start xl:justify-around ">
+    <div className="w-3/4 h-svh md:h-svh items-start flex flex-col md:w-2/4 md:flex-col md:items-start md:justify-around ">
       <div className=" xl:h-max xl:w-full xl:flex xl:flex-col xl:justify-between p-10">
         <img
           className="w-20 rounded-full xl:w-20 xl:h-20 "

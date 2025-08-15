@@ -26,13 +26,10 @@ export default function Homepage() {
   return (
     <>
       <div className="h-full xl:h-full flex flex-col pt-0 items-center justify-start overflow-x-hidden pb-0 bg-background ">
-        {/*navigationbar*/}
-        {/*profile section*/}
         <Navigation />
         <Profile />
         <div className="flex flex-col items-center justify-between h-max xl:h-fit xl:items-center">
           <Projects />
-          {/*test modal for graphic designs*/}
           <Outro />
         </div>
       </div>

@@ -29,9 +29,9 @@ export default function Projects() {
   ];
 
   return (
-    <div className="h-max w-3/4 flex flex-col  items-center justify-start xl:h-min  xl:justify-between ">
+    <div className="h-max w-3/4 flex flex-col  items-center justify-start md:h-min  md:justify-between ">
       {/*project1*/}
-      <div className="xl:w-full xl:h-max xl:flex xl:flex-row xl:justify-evenly xl:flex-wrap gap-6">
+      <div className="md:w-full md:h-max md:flex md:flex-row md:justify-evenly md:flex-wrap gap-6">
         {projects.map((project) => (
           <Projector
             title={project.title}
